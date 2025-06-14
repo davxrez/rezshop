@@ -1,7 +1,377 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Tienda de RezRP</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0 20px 40px 20px;
+    background: url('https://media.discordapp.net/attachments/1313748623305080872/1366725471160635463/back.png?ex=684ca888&is=684b5708&hm=28605bf65eaa648b7d64e497eb7d2cdfc06958b1b115a0f4a184c657759d0867&=&format=webp&quality=lossless&width=1295&height=864') no-repeat center center fixed;
+    background-size: cover;
+    color: #ddd;
+  }
+
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0;
+    border-bottom: 2px solid #4b3a66;
+    color: #a8a8ff;
+  }
+
+  header .logo-title {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  header img#rezrp-logo {
+    width: 140px;
+    height: auto;
+    filter: drop-shadow(0 0 8px #7b6ecb);
+  }
+
+  header .links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  header .links a {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #ccc;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 6px 12px;
+    border-radius: 20px;
+    background: rgba(74, 58, 140, 0.7);
+    box-shadow: 0 0 6px #9372d9;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  header .links a:hover {
+    background: #9372d9;
+    color: white;
+  }
+
+  header .links img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .botones {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 25px 0 20px 0;
+    flex-wrap: wrap;
+  }
+
+  .botones button {
+    background: linear-gradient(45deg, #6a4b9c, #4a3a8c);
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    color: #ddd;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(74, 58, 140, 0.6);
+    transition: background 0.3s ease, color 0.3s ease;
+    font-size: 1rem;
+  }
+  .botones button:hover {
+    background: linear-gradient(45deg, #9372d9, #785fc2);
+    color: white;
+    box-shadow: 0 6px 12px rgba(115, 114, 217, 0.9);
+  }
+
+  #section-content {
+    background-color: rgba(30, 10, 60, 0.85);
+    border: 1px solid #4b3a66;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 900px;
+    margin: 0 auto;
+    box-shadow: 0 0 15px rgba(75, 58, 102, 0.7);
+    color: #ddd;
+  }
+
+  h1 {
+  font-weight: 700;
+  font-size: 1.8rem;
+  margin: 0;
+  color: #b28fff; /* morado */
+  text-shadow: 0 0 8px #9372d9;
+}
+
+h2 {
+  color: #0000ff; /* azul */
+  margin-top: 0;
+}
+
+h3 {
+  color: #ba0404; 
+  margin-top: 0;
+}
+
+  .precio,
+.precio1 {
+  color: #00b227; 
+  font-weight: bold;
+}
+
+p {
+  color: red;
+}
+
+  ul {
+    padding-left: 20px;
+    color: #ffffff;
+  }
+
+  .section-img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border: 2px solid #7156a6;
+    box-shadow: 0 0 8px #8159bb;
+  }
+
+  .boton {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 28px;
+    background-color: #4a3a8c;
+    color: #ddd;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(74, 58, 140, 0.6);
+    transition: background-color 0.3s ease;
+  }
+  .boton:hover {
+    background-color: #9372d9;
+    color: white;
+  }
+
+  .categoria-coche {
+    margin-bottom: 30px;
+  }
+  .categoria-coche h3 img {
+    vertical-align: middle;
+    width: 40px;
+    height: auto;
+    margin-right: 10px;
+    filter: drop-shadow(0 0 2px #7b6ecb);
+  }
+</style>
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+
+<div class="container">
+  <header>
+    <div class="logo-title">
+      <img id="rezrp-logo" src="https://media.discordapp.net/attachments/1313748623305080872/1370658251242471434/REZRP.png?ex=684c76b8&is=684b2538&hm=2f879bb1883409d88573619fbf5a2c166cdb942c6a8916ed6d3c3a2825114d62&=&format=webp&quality=lossless&width=1295&height=864" alt="RezRP Logo" />
+      <h1>Tienda de RezRP</h1>
+    </div>
+    <div class="links">
+      <a href="https://discord.gg/uN7nXC4x" target="_blank" rel="noopener noreferrer">
+        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111370.png" alt="Discord" /> Discord
+      </a>
+    </div>
+  </header>
+
+  <div class="botones">
+    <button onclick="showSection('club')">Club</button>
+    <button onclick="showSection('banda')">Banda</button>
+    <button onclick="showSection('mafia')">Mafia</button>
+    <button onclick="showSection('coches')">Coches Exclusivos</button>
+    <button onclick="showSection('vip')">VIP</button>
+    <button onclick="showSection('casa')">Casa</button>
+    <button onclick="showSection('mansion')">Mansion</button>
+    <button onclick="showSection('acerca')">Acerca de nosotros</button>
+    <button onclick="showSection('normativa')">Bienvenido a la normativa estricta de RezRP</button>
+    <button onclick="showSection('condiciones')">Condiciones</button>
+  </div>
+
+  <div id="section-content">
+    <p>Selecciona una categoría para ver detalles.</p>
+  </div>
+</div>
+
+<script>
+  const sections = {
+    club: `
+      <img src="https://media.discordapp.net/attachments/1313748623305080872/1365747954542968832/club.jpg?ex=684b1466&is=6849c2e6&hm=4dfb42f76ba502aa510a7cd373d3b592a4da98041a66be6d0058893a9b69c201&=&format=webp&width=231&height=289" alt="Club" class="section-img" />
+      <h2>Club</h2>
+      <p class="precio"> €30 EU </p>
+      <h1>¿ Qué tiene un Club ? </h1>
+      <ul>
+        <li>Ranking de todos los clubs.</li>
+        <li>Pueden acceder a carreras personalizadas donde se ganara dinero en negro.</li>
+        <li>Acceso rápido a la compra de Óxido Nitroso.(esto no quita que el nitroso siga siendo ilegal)</li>
+      </ul>
+      <a href="https://www.paypal.com/ncp/payment/LWRC5KLPL5ZQS" class="boton" target="_blank" rel="noopener noreferrer">Comprar Club</a>
+    `,
+    banda: `
+      <img src="https://cdn.discordapp.com/attachments/1313748623305080872/1365747954228658386/banda.jpg?ex=684c65e6&is=684b1466&hm=f8421a37ff69267f72aef280ba03dcce3156fed2fe5865c4e8e726e9be0da4f1&" alt="Banda" class="section-img" />
+      <h2>Banda</h2>
+      <p class="precio">€60 EU</p>
+      <ul>
+        <h1>¿ Qué tiene una Banda? </h1>
+        <li> Objetos personalizados.</li>
+        <li> Ropa Personalizada.</li>
+        <li> Acciones sobre el ciudadano (inmovilizar, tapar el rostro etc..)</li>
+        <li> Acceso a la venta de droga.</li>
+        <li> Acceso a armas de corta distancia.</li>
+        <li> Coche exclusivo de 4 plazas.</li>
+        <h1>Requisitos:</h1>
+        <li> Antes de comprar debes tener 4 personas como mínimo para tu banda (10 máximo).</li>
+        <li>Se considera que todos los integrantes saben perfectamente las normas y que no abusaran de los poderes que se les otorga. (De lo contrario puede suponer una suspensión de esta.)</li>
+      </ul>
+      <a href="https://www.paypal.com/ncp/payment/XZDW8TD44E2AE" class="boton" target="_blank" rel="noopener noreferrer">Comprar Banda</a>
+    `,
+    mafia: `
+      <img src="https://media.discordapp.net/attachments/1313748623305080872/1365747954782048358/MAFIA.jpg?ex=684c65e6&is=684b1466&hm=a89cf75e7ad4673d89e2207e3f8dfd11500f386bd364f3587e4c4c77e273d955&=&format=webp&width=231&height=289" alt="Mafia" class="section-img" />
+      <h2>Mafia</h2>
+      <p class="precio">€70 EU</p>
+      <ul>
+        <h1>¿Qué tiene una Mafia?</h1>
+        <li>Items personalizados.</li>
+        <li>Acciones sobre el ciudadano (inmovilizar, tapar el rostro etc..).</li>
+        <li>Coche exclusivo de 4 plazas.</li>
+        <li>Se dan dos puntos de droga a su elección.</li>
+        <li>Puedes lavar dinero negro en una zona designada para ello.</li>
+        <li>Acceso a armas de larga distancia.</li>
+        <h1>Requisitos:</h1>
+        <li>Antes de comprar debes tener 6 personas como mínimo para tu mafia (10 máximo).</li>
+        <li>Se considera que todos los integrantes saben perfectamente las normas y que no abusaran de los poderes que se les otorga. (De lo contrario puede suponer una suspensión de esta.).</li>
+      </ul>
+      <a href="https://www.paypal.com/ncp/payment/GMWUDH5K6V7GQ" class="boton" target="_blank" rel="noopener noreferrer">Comprar Mafia</a>
+    `,
+    coches: `
+      <h2>Coches Exclusivos</h2>
+      <div class="categoria-coche">
+        <h3><img src="https://media.discordapp.net/attachments/1313748623305080872/1365747919147499560/tier1.jpg?ex=684b145e&is=6849c2de&hm=4fee9d78dd39c922a70c9110519275726d49a566cdb2dcb87b61c5a2b2fced8b&=&format=webp&width=231&height=289" alt="Tier 1" />TIER 1</h3>
+        <p>€8 EU cada uno</p>
+        <ul>
+          <li>Lamborghini Aventador SVJ</li>
+          <li>BMW i8</li>
+          <li>Ferrari F8 Tributo</li>
+          <li>Ford Mustang Shelby GT500</li>
+        </ul>
+      </div>
+      <div class="categoria-coche">
+        <h3><img src="https://media.discordapp.net/attachments/1313748623305080872/1365747919369801889/TIER2.jpg?ex=684b145e&is=6849c2de&hm=5d4b50de0e24ff64067db63f0f194de2c9ba60e77094d74f1ba5018c50ce7558&=&format=webp&width=231&height=289" alt="Tier 2" />TIER 2</h3>
+        <p>€10 EU cada uno</p>
+        <ul>
+          <li>McLaren 720S</li>
+          <li>Porsche 911 Turbo S</li>
+          <li>Audi R8 V10 Plus</li>
+          <li>Chevrolet Corvette Z06</li>
+        </ul>
+      </div>
+      <div class="categoria-coche">
+        <h3><img src="https://media.discordapp.net/attachments/1313748623305080872/1365747919663271988/tier3.jpg?ex=684b145e&is=6849c2de&hm=e31ab592e4021c770ae406107dd8c2d4fed658896d7fa34be618ea3567d197d8&=&format=webp&width=231&height=289" alt="Tier 3" />TIER 3</h3>
+        <p>€12 EU cada uno</p>
+        <ul>
+          <li>Bugatti Chiron</li>
+          <li>Pagani Huayra</li>
+          <li>Koenigsegg Agera RS</li>
+          <li>Lexus LFA</li>
+        </ul>
+      </div>
+      <div class="categoria-coche">
+        <h3><img src="https://media.discordapp.net/attachments/1313748623305080872/1365747920045080576/tier4.jpg?ex=684b145e&is=6849c2de&hm=8651e6eb60fa2c0bd9363c3bf78329bd80977c0be9eca725d9721472f012a262&=&format=webp&width=231&height=289" alt="Tier 4" />TIER 4</h3>
+        <p>€15 EU cada uno</p>
+        <ul>
+          <li>Mercedes AMG GT Black Series</li>
+          <li>Jaguar XJ220</li>
+          <li>Nissan GT-R R35</li>
+          <li>Tesla Roadster</li>
+        </ul>
+      </div>
+      <a href="https://www.paypal.com/ncp/payment/67RG53S83E2NC" class="boton" target="_blank" rel="noopener noreferrer">Comprar Coches Exclusivos</a>
+    `,
+    vip: `
+  <img src="https://media.discordapp.net/attachments/1313748623305080872/1365747920367915048/Vip.jpg?ex=684c65de&is=684b145e&hm=bbd937af6763ffbd86d79fbeaf62cb5c02edfe30966f8ef73b8440fd35def152&=&format=webp&width=231&height=289" alt="VIP" class="section-img" />
+  <h2>VIP🪙</h2>
+  <p class="precio">€10 EU</p>
+  <ul>
+    <h1>Obtendrás:</h1>
+    <li>Rol distintivo en nuestro discord. (Vip🪙).</li>
+    <li>Acceso a una sala privada con el resto de usuarios VIP.</li>
+    <li>Acceso a comprar items únicos.</li>
+  </ul>
+  <a href="https://www.paypal.com/ncp/payment/MZHNJDFQM8DT8" class="boton" target="_blank" rel="noopener noreferrer">Comprar VIP</a>
+`,
+    casa: `
+  <img src="https://media.discordapp.net/attachments/1313748623305080872/1366725381356523530/CASA.jpg?ex=684ca873&is=684b56f3&hm=33e0a75c96e01c182f7b8d66d688326fa8bbdf15d1334eec95cf3b9f19686b34&=&format=webp&width=231&height=289" alt="Casa" class="section-img" />
+  <h2>Casa</h2>
+  <p class="precio">€35 EU</p>
+  <ul>
+    <li>Casa con garaje para 2 coches.</li>
+    <li>Decoración personalizada.</li>
+    <li>Almacenamiento de objetos.</li>
+  </ul>
+  <a href="https://www.paypal.com/paypalme/CustomsDCS?locale.x=es_ES" class="boton" target="_blank" rel="noopener noreferrer">Comprar Casa</a>
+`,
+   mansion: `
+  <img src="https://media.discordapp.net/attachments/1313748623305080872/1366725381041815593/mansion.jpg?ex=684ca873&is=684b56f3&hm=fcbcef569a12e16d5e9c2b8db6784360a8283562873cbc970ec59259aad700e2&=&format=webp&width=231&height=289" alt="Mansion" class="section-img" />
+  <h2>Mansion</h2>
+  <p class="precio">€80 EU</p>
+  <ul>
+    <li>Gran mansión con piscina privada.</li>
+    <li>Garaje para 10 coches exclusivos.</li>
+    <li>Seguridad 24/7 y servicio personal.</li>
+    <li>Acceso a eventos VIP exclusivos.</li>
+  </ul>
+  <a href="https://www.paypal.com/paypalme/CustomsDCS?locale.x=es_ES" class="boton" target="_blank" rel="noopener noreferrer">Comprar Mansion</a>
+`,
+     acerca:
+      `<h2>Acerca de nosotros</h2>
+      <p>Somos RezRP, una comunidad dedicada a ofrecer experiencias únicas y exclusivas para nuestros jugadores.</p>
+      <p>Nos esforzamos por crear un ambiente justo y divertido, con contenido de calidad y soporte constante.</p>`,
+
+    normativa:
+      `<h2>Bienvenido a la normativa estricta de RezRP</h2>
+      <p>En RezRP tenemos normas claras para garantizar el respeto, el rol y la diversión de todos.</p>
+      <ul>
+        <li>Prohibido el metajuego.</li>
+        <li>No se tolera el powergaming.</li>
+        <li>Respetar a todos los miembros de la comunidad.</li>
+        <li>Seguir las directrices del staff en todo momento.</li>
+      </ul>`,
+
+    condiciones:
+      `<h2>Condiciones</h2>
+      <p>Al comprar nuestros productos o servicios, aceptas los siguientes términos y condiciones:</p>
+      <ul>
+        <li>Los productos son para uso dentro del servidor y no transferibles.</li>
+        <li>No se aceptan devoluciones ni reembolsos.</li>
+        <li>El incumplimiento de las normas puede conllevar la suspensión o expulsión.</li>
+        <li>Nos reservamos el derecho de modificar las condiciones sin previo aviso.</li>
+      </ul>`,
+  };
+
+  function showSection(name) {
+    const contentDiv = document.getElementById('section-content');
+    contentDiv.innerHTML = sections[name] || '<p>Selección no válida.</p>';
+  }
+</script>
+
 </body>
 </html>
