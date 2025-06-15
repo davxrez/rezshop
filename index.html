@@ -8,7 +8,7 @@
   body {
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0 20px 40px 20px;
+    padding: 0 5vw 40px 5vw;
     background: url('https://r2.fivemanage.com/oSmuRYM0ZcAMuD3lB4PXT/ad.png') no-repeat center center fixed;
     background-size: cover;
     color: #dddddd;
@@ -215,6 +215,50 @@ p {
   font-size: 1.2rem;
   color: #00bfff;
   text-shadow: 0 0 4px #000;
+  @media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: center;
+  }
+
+  header .logo-title {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header .links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .botones {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .botones button {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .categoria-coche {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  .container {
+    padding: 0 10px;
+  }
+}
 }
 
 </style>
