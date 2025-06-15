@@ -169,18 +169,33 @@ p {
   }
 
 .categoria-coche {
-  margin-bottom: 30px;
   display: flex;
-  align-items: center;       
-  gap: 20px;                 
-  border: 1px solid #ccc;    
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(45deg, #6a4b9c, #4a3a8c);
+  border-radius: 25px;
   padding: 20px;
+  color: #ddd;
+  font-weight: 600;
+  box-shadow: 0 4px 8px rgba(74, 58, 140, 0.6);
+  transition: background 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+  width: 250px;
+  margin: 10px auto;
+}
+.categoria-coche:hover {
+  background: linear-gradient(45deg, #9372d9, #785fc2);
+  color: white;
+  box-shadow: 0 6px 12px rgba(115, 114, 217, 0.9);
 }
 
 .categoria-coche img {
-  width: 200px;
+  width: 150px;
   height: auto;
-  filter: drop-shadow(0 0 2px #7b6ecb);
+  border-radius: 10px;
+  margin-bottom: 15px;
+  filter: drop-shadow(0 0 4px #7b6ecb);
 }
 
 .categoria-coche .info {
@@ -191,14 +206,16 @@ p {
 }
 
 .categoria-coche .precio {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 5px;
   color: #4CAF50;
+  font-size: 1rem;
+  margin-bottom: 10px;
 }
 
 .categoria-coche h2 {
-  margin: 0;
+  margin: 10px 0 5px 0;
+  font-size: 1.2rem;
+  color: #00bfff;
+  text-shadow: 0 0 4px #000;
 }
 
 </style>
@@ -311,7 +328,7 @@ vip: `
         <h2><img src="https://r2.fivemanage.com/oSmuRYM0ZcAMuD3lB4PXT/tier1.jpg" </h2>
         <h3> Precio : €20EU </h3>
         <ul>
-           <h1>Coche Personalizado</h1>
+           <h2>Coche Personalizado</h2>
           <br></br>
           <h2>Pros:</h2>
           <br></br>
@@ -326,7 +343,7 @@ vip: `
         <h2><img src="https://r2.fivemanage.com/oSmuRYM0ZcAMuD3lB4PXT/TIER2.jpg" </h2>
         <h3> Precio : €30EU </h3>
         <ul>
-          <h1>Coche Personalizado</h1>
+          <h2>Coche Personalizado</h2>
           <br></br>
           <h2>Pros:</h2>
           <br></br>
@@ -341,7 +358,7 @@ vip: `
         <h2><img src="https://r2.fivemanage.com/oSmuRYM0ZcAMuD3lB4PXT/tier3.jpg" </h2>
         <h3> Precio : €40EU </h3>
         <ul>
-          <h1>Coche Personalizado</h1>
+          <h2>Coche Personalizado</h2>
           <br></br>
           <h2>Pros:</h2>
           <br></br>
@@ -358,7 +375,7 @@ vip: `
         <h2><img src="https://r2.fivemanage.com/oSmuRYM0ZcAMuD3lB4PXT/tier4.jpg" </h2>
         <h3> Precio : €50EU </h3>
         <ul>
-          <h1>Coche Personalizado</h1>
+          <h2>Coche Personalizado</h2>
           <br></br>
           <h2>Pros:</h2>
           <br></br>
